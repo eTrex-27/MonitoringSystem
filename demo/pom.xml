@@ -22,7 +22,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>ru.etrex.DemoApplication</mainClass>
+                            <mainClass>ru.etrex.monitoring.demo.DemoApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
