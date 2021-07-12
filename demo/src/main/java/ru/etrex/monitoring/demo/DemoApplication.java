@@ -1,5 +1,8 @@
 package ru.etrex.monitoring.demo;
 
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import ru.etrex.monitoring.DiffAnalyzer;
 import ru.etrex.monitoring.DiffResult;
 import ru.etrex.monitoring.TextRenderer;
@@ -7,8 +10,14 @@ import ru.etrex.monitoring.TextRenderer;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DemoApplication {
+@SpringBootApplication
+public class DemoApplication implements CommandLineRunner {
     public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+
+    @Override
+    public void run(String... args) {
         Map<String, String> yesterday = new HashMap<>();
         Map<String, String> today = new HashMap<>();
 
