@@ -1,10 +1,13 @@
 package ru.etrex.monitoring;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.List;
 
 /**
  * Генерирует сообщение пользователю об изменениях урлов
  */
+@UtilityClass
 public class TextRenderer {
 
     private static final String Template = "Здравствуйте, дорогая и.о. секретаря\r\n" +
@@ -18,7 +21,7 @@ public class TextRenderer {
             "автоматизированная система\r\n" +
             "мониторинга.";
 
-    public static String run(DiffResult result) {
+    public String run(DiffResult result) {
         String message = Template;
         message = replaceText(result.getRemoved(), "{REMOVED}", "нет исчезнувших урлов", message);
         message = replaceText(result.getAdded(), "{ADDED}", "нет добавленных урлов", message);
@@ -26,7 +29,7 @@ public class TextRenderer {
         return message;
     }
 
-    private static String replaceText(List<String> result, String placeholder, String nullMessage, String newMessage) {
+    private String replaceText(List<String> result, String placeholder, String nullMessage, String newMessage) {
         if (result.size() != 0) {
             newMessage = newMessage.replace(placeholder, result.toString());
         }

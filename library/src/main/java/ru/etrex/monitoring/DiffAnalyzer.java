@@ -1,5 +1,7 @@
 package ru.etrex.monitoring;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -8,6 +10,7 @@ import java.util.Map;
 /**
  * Анализирует разницу между хэш-таблицами (изменение, удаление, добавление)
  */
+@UtilityClass
 public class DiffAnalyzer {
     /**
      * Анализирует разницу между хэш-таблицами (изменение, удаление, добавление)
@@ -15,7 +18,7 @@ public class DiffAnalyzer {
      * @param map2 вторая хэш-таблица
      * @return результат анализа
      */
-    public static DiffResult run(Map<String, String> map1, Map<String, String> map2) {
+    public DiffResult run(Map<String, String> map1, Map<String, String> map2) {
         List<String> changedURLs = new ArrayList<>();
         List<String> removedURLs = new ArrayList<>();
         List<String> addedURLs = new ArrayList<>();
