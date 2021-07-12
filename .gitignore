@@ -2,4 +2,6 @@
 .idea/*
 
 MonitoringSystem.iml
-target/*
+demo/target/*
+library/target/*
+

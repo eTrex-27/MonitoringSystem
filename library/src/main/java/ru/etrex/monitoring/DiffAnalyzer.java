@@ -1,6 +1,9 @@
 package ru.etrex.monitoring;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Анализирует разницу между хэш-таблицами (изменение, удаление, добавление)

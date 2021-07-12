@@ -1,8 +1,9 @@
-package ru.etrex;
+package ru.etrex.monitoring.demo;
 
 import ru.etrex.monitoring.DiffAnalyzer;
 import ru.etrex.monitoring.DiffResult;
 import ru.etrex.monitoring.TextRenderer;
+
 import java.util.HashMap;
 import java.util.Map;
 
